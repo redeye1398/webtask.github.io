@@ -5,8 +5,10 @@ import styled, { keyframes } from "styled-components";
 // import pinkBlob from "../../assets/blobPink.png";
 // import purpleBlob from "../../assets/blob purple.png";
 // import whiteBlob from "../../assets/blob white.png";
+
+import blob from "../../assets/blob.png";
 import arrow from "../../assets/Arrow Right.svg";
-import Mobile from "../../assets/mobile.svg";
+// import Mobile from "../../assets/mobile.svg";
 
 const move = keyframes`
 0% { transform: translateY(-5px)  }
@@ -78,6 +80,7 @@ const MobileSvg = styled.img`
   width: calc(30% + 20vw);
   height: 500px;
   z-index: 7;
+  right: 150px;
   animation: ${move} 2.5s ease infinite;
   @media only Screen and (max-width: 48em) {
     align-self: flex-start;
@@ -85,9 +88,10 @@ const MobileSvg = styled.img`
     bottom: 0;
     width: calc(30% + 20vw);
     opacity: 0.5;
+    display: block;
   }
   @media only Screen and (max-width: 40em) {
-    display: none;
+    display: block;
   }
 `;
 
@@ -113,38 +117,36 @@ const Lb = styled.div`
   }
 `;
 
-const Topic = styled.span`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--nav);
-  //color: var(--white);
-  font-weight: 700;
-  font-size: calc(0.4rem + 0.4vw);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  // color: var(--white);
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 42px #0fa, 0 0 82px #0fa,0 0 92px #0fa;
-	color:var(--white);
-	//font-size: 30px;
-	//text-align: center;	 
-`;
+// const Topic = styled.span`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background-color: var(--nav);
+//   color: var(--white);
+//   font-weight: 700;
+//   font-size: calc(0.4rem + 0.4vw);
+//   padding: 0.5rem 1rem;
+//   border-radius: 20px;
+// `;
 
-const Circle = styled.span`
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  background-color: var(--purple);
-  margin-right: 0.5rem;
-`;
+// const Circle = styled.span`
+//   display: inline-block;
+//   width: 1rem;
+//   height: 1rem;
+//   border-radius: 50%;
+//   background-color: var(--purple);
+//   margin-right: 0.5rem;
+// `;
 
 const Title = styled.h1`
   font-size: calc(2rem + 1vw);
   line-height: 1.2;
   padding: 0.5rem 0;
-  color: var(--white);
-  
+  // color: var(--white);
+  text-shadow: 0 0 10px #3bedb7, 0 0 20px #3bedb7, 0 0 42px #3bedb7, 0 0 82px #3bedb7, 0 0 92px #3bedb7;
+	color:white;
+	//font-size: 30px;
+	//text-align: center;	 
   
 `;
 
@@ -197,16 +199,16 @@ const HeroSection = () => {
 
       <MainContent id="home">
         <Lb id="leftBlock">
-          <Topic>
+          {/* <Topic>
             <Circle />
             <span>Welcome To Katmap Remedies Family</span>
-          </Topic>
-          <Title>Knowledge of life and longevity</Title>
+          </Topic> */}
+          <Title>Root for many fruits...</Title>
           <SubText>
           We are effective ayurveda brand 
-          and our hair care and skin care products 
-          & even psoriasis care products have been developed with years
-          of research to ensure that they will make you look & feel better.
+          our hair care , skin care  
+          and psoriasis care products have been developed with years
+          of research to ensure that  will make you look & feel better.
           </SubText>
           <CTA>
             Get in touch &nbsp;
@@ -215,7 +217,7 @@ const HeroSection = () => {
         </Lb>
 
         <MobileSvg
-          src={Mobile}
+          src={blob}
           alt="Mobile Svg"
           srcset=""
           width="400"

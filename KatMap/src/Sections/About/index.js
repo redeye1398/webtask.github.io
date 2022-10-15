@@ -1,8 +1,8 @@
 import styled, { keyframes } from "styled-components";
-// import wave from "../../assets/waves.svg";
+import wave from "../../assets/waves.svg";
 import rocket from "../../assets/rocket image.png";
-import human from "../../assets/human.png";
-import hand from "../../assets/hand.svg";
+// import human from "../../assets/human.png";
+// import hand from "../../assets/hand.svg";
 
 const move = keyframes`
 0% { transform: translateY(-5px)         }
@@ -17,23 +17,24 @@ const AboutSection = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--white);
 `;
-// const Waves = styled.img`
-//   width: 100%;
-//   height: auto;
-//   position: absolute;
-//   top: -1rem;
-//   color:var(--nav)
-// `;
-const Hand = styled.div`
+const Waves = styled.img`
+  width: 100%;
+  height: auto;
   position: absolute;
-  bottom: -1rem;
-  right: 0;
-
-  @media only Screen and (max-width: 40em) {
-    display: none;
-  }
+  top: -1rem;
+  color:var(--purple)
 `;
+// const Hand = styled.div`
+//   position: absolute;
+//   bottom: -1rem;
+//   right: 0;
+
+//   @media only Screen and (max-width: 40em) {
+//     display: none;
+//   }
+// `;
 
 const Main = styled.div`
   margin: 0 15rem;
@@ -54,13 +55,14 @@ const Main = styled.div`
 const Title = styled.h1`
   font-size: 2rem;
   display: inline-block;
+  color:black;
 `;
 
 const CurvedLine = styled.div`
   width: 7rem;
   height: 2rem;
-  border: solid 5px var(--nav);
-  border-color: var(--nav) transparent transparent transparent;
+  border: solid 5px var(--purple);
+  border-color: var(--purple) transparent transparent transparent;
   border-radius: 150%/60px 70px 0 0;
 `;
 
@@ -86,20 +88,20 @@ const Rocket = styled.div`
   }
 `;
 
-const Human = styled.div`
-  width: 50%;
-  position: absolute;
-  right: 0;
-  bottom: 100%;
+// const Human = styled.div`
+//   width: 50%;
+//   position: absolute;
+//   right: 0;
+//   bottom: 100%;
 
-  @media only Screen and (max-width: 40em) {
-    display: none;
-  }
-`;
+//   @media only Screen and (max-width: 40em) {
+//     display: none;
+//   }
+// `;
 const Text = styled.h4`
   font-size: calc(0.5rem + 1vw);
   line-height: 1.5;
-  color: var(--nav2);
+  color: rgba(0,0,0,0.65);
 `;
 const Circle = styled.span`
   display: inline-block;
@@ -121,10 +123,10 @@ const AboutText = styled.div`
 const About = () => {
   return (
     <AboutSection id="about">
-      {/* <Waves src={wave} alt="" /> */}
-      <Hand>
+      <Waves src={wave} alt="" />
+      {/* <Hand>
         <img src={hand} alt="" />
-      </Hand>
+      </Hand> */}
       <Main>
         <div>
           <Title>About Us</Title>
@@ -135,9 +137,9 @@ const About = () => {
             <img src={rocket} alt="" width="400" height="600" />
           </Rocket>
           <AboutText>
-            <Human>
+            {/* <Human>
               <img src={human} alt="" width="400" height="400" />
-            </Human>
+            </Human> */}
 
             <Text>
             Serving with Herbs ” – 
