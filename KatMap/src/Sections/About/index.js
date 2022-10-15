@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import wave from "../../assets/waves.svg";
+// import wave from "../../assets/waves.svg";
 import rocket from "../../assets/rocket image.png";
 import human from "../../assets/human.png";
 import hand from "../../assets/hand.svg";
@@ -18,12 +18,13 @@ const AboutSection = styled.section`
   justify-content: center;
   align-items: center;
 `;
-const Waves = styled.img`
-  width: 100%;
-  height: auto;
-  position: absolute;
-  top: -1rem;
-`;
+// const Waves = styled.img`
+//   width: 100%;
+//   height: auto;
+//   position: absolute;
+//   top: -1rem;
+//   color:var(--nav)
+// `;
 const Hand = styled.div`
   position: absolute;
   bottom: -1rem;
@@ -58,8 +59,8 @@ const Title = styled.h1`
 const CurvedLine = styled.div`
   width: 7rem;
   height: 2rem;
-  border: solid 5px var(--purple);
-  border-color: var(--purple) transparent transparent transparent;
+  border: solid 5px var(--nav);
+  border-color: var(--nav) transparent transparent transparent;
   border-radius: 150%/60px 70px 0 0;
 `;
 
@@ -120,7 +121,7 @@ const AboutText = styled.div`
 const About = () => {
   return (
     <AboutSection id="about">
-      <Waves src={wave} alt="" />
+      {/* <Waves src={wave} alt="" /> */}
       <Hand>
         <img src={hand} alt="" />
       </Hand>

@@ -2,9 +2,9 @@
 
 import styled, { keyframes } from "styled-components";
 
-import pinkBlob from "../../assets/blobPink.png";
-import purpleBlob from "../../assets/blob purple.png";
-import whiteBlob from "../../assets/blob white.png";
+// import pinkBlob from "../../assets/blobPink.png";
+// import purpleBlob from "../../assets/blob purple.png";
+// import whiteBlob from "../../assets/blob white.png";
 import arrow from "../../assets/Arrow Right.svg";
 import Mobile from "../../assets/mobile.svg";
 
@@ -31,34 +31,34 @@ const HomeSection = styled.section`
   }
 `;
 
-const Blobs = styled.div`
-  width: 100%;
-  position: absolute;
-  right: 0;
-  @media only Screen and (max-width: 48em) {
-    opacity: 0.5;
-  }
-`;
+// const Blobs = styled.div`
+//   width: 100%;
+//   position: absolute;
+//   right: 0;
+//   @media only Screen and (max-width: 48em) {
+//     opacity: 0.5;
+//   }
+// `;
 
-const PinkBlob = styled.div`
-  width: calc(15% + 15vw);
-  position: absolute;
-  right: 0;
-  top: calc(5rem + 5vw);
-  z-index: 6;
-`;
-const PurpleBlob = styled.div`
-  width: calc(10% + 10vw);
-  position: absolute;
-  right: 0;
-`;
-const WhiteBlob = styled.div`
-  width: calc(20% + 20vw);
-  position: absolute;
-  right: calc(3.5rem + 3.5vw);
-  top: calc(2rem + 2vw);
-  z-index: 5;
-`;
+// const PinkBlob = styled.div`
+//   width: calc(15% + 15vw);
+//   position: absolute;
+//   right: 0;
+//   top: calc(5rem + 5vw);
+//   z-index: 6;
+// `;
+// const PurpleBlob = styled.div`
+//   width: calc(10% + 10vw);
+//   position: absolute;
+//   right: 0;
+// `;
+// const WhiteBlob = styled.div`
+//   width: calc(20% + 20vw);
+//   position: absolute;
+//   right: calc(3.5rem + 3.5vw);
+//   top: calc(2rem + 2vw);
+//   z-index: 5;
+// `;
 
 const MainContent = styled.div`
   display: flex;
@@ -138,11 +138,17 @@ const Title = styled.h1`
   font-size: calc(2rem + 1vw);
   line-height: 1.2;
   padding: 0.5rem 0;
+  // color: var(--white);
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 42px #0fa, 0 0 82px #0fa,0 0 92px #0fa;
+	color:var(--white);
+	//font-size: 30px;
+	//text-align: center;	 
+  
 `;
 
 const SubText = styled.h5`
   font-size: calc(0.5rem + 0.5vw);
-  color: var(--nav2);
+  color: var(--white);
 `;
 
 const CTA = styled.button`
@@ -175,7 +181,7 @@ const CTA = styled.button`
 const HeroSection = () => {
   return (
     <HomeSection id="home">
-      <Blobs>
+      {/* <Blobs>
         <PinkBlob>
           <img src={pinkBlob} alt="" width="400" height="400" />{" "}
         </PinkBlob>
@@ -185,7 +191,7 @@ const HeroSection = () => {
         <PurpleBlob>
           <img src={purpleBlob} alt="" width="400" height="400" />
         </PurpleBlob>
-      </Blobs>
+      </Blobs> */}
 
       <MainContent id="home">
         <Lb id="leftBlock">
