@@ -118,11 +118,16 @@ const Topic = styled.span`
   align-items: center;
   justify-content: center;
   background-color: var(--nav);
-  color: var(--white);
+  //color: var(--white);
   font-weight: 700;
   font-size: calc(0.4rem + 0.4vw);
   padding: 0.5rem 1rem;
   border-radius: 20px;
+  // color: var(--white);
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 42px #0fa, 0 0 82px #0fa,0 0 92px #0fa;
+	color:var(--white);
+	//font-size: 30px;
+	//text-align: center;	 
 `;
 
 const Circle = styled.span`
@@ -138,11 +143,8 @@ const Title = styled.h1`
   font-size: calc(2rem + 1vw);
   line-height: 1.2;
   padding: 0.5rem 0;
-  // color: var(--white);
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 42px #0fa, 0 0 82px #0fa,0 0 92px #0fa;
-	color:var(--white);
-	//font-size: 30px;
-	//text-align: center;	 
+  color: var(--white);
+  
   
 `;
 

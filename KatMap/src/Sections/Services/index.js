@@ -1,11 +1,11 @@
 import gsap from "gsap";
-import { useEffect, useRef } from "react";
+import {  useRef } from "react";
 import styled from "styled-components";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import Tube from "../../assets/3dtube.png";
 // import Cone from "../../assets/3dtriangle.png";
-import Capsule from "../../assets/3dcapsule.png";
+
 
 import TextBlock from "../../components/TextBlock";
 import SvgBlock from "../../components/SvgBlock";
@@ -25,21 +25,21 @@ const ServiceSection = styled.section`
   padding-top: 20rem;
 `;
 
-const Background = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 85vh;
-  z-index: -1;
-  background-color: #C1F6ED;
-  background-size: auto 100vh;
-  background-repeat: no-repeat;
-`;
+// const Background = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   bottom: 0;
+//   width: 100vw;
+//   height: 85vh;
+//   z-index: -1;
+//   background-color: #C1F6ED;
+//   background-size: auto 100vh;
+//   background-repeat: no-repeat;
+// `;
 
 const Title = styled.h1`
   color: var(--white);
@@ -61,20 +61,20 @@ const Title = styled.h1`
   }
 `;
 
-const Line = styled.span`
-  border-left: 4px solid var(--background);
-  height: 15rem;
-  margin-top: 2rem;
-  border-radius: 20px 20px 0 0;
-`;
+// const Line = styled.span`
+//   border-left: 4px solid var(--background);
+//   height: 15rem;
+//   margin-top: 2rem;
+//   border-radius: 20px 20px 0 0;
+// `;
 
-const Triangle = styled.span`
-  width: 0;
-  height: 0;
-  border-left: 1.2rem solid transparent;
-  border-right: 1.2rem solid transparent;
-  border-top: 2rem solid var(--background);
-`;
+// const Triangle = styled.span`
+//   width: 0;
+//   height: 0;
+//   border-left: 1.2rem solid transparent;
+//   border-right: 1.2rem solid transparent;
+//   border-top: 2rem solid var(--background);
+// `;
 
 const Content = styled.div`
   display: flex;
@@ -116,7 +116,7 @@ const OBJ = styled.div`
 `;
 
 const Services = () => {
-  const ref = useRef(null);
+  //const ref = useRef(null);
   gsap.registerPlugin(ScrollTrigger);
   const revealRefs = useRef([]);
   revealRefs.current = [];
@@ -311,11 +311,11 @@ const Services = () => {
   //   });
   // }, []);
 
-  const addToRefs = (el) => {
-    if (el && !revealRefs.current.includes(el)) {
-      revealRefs.current.push(el);
-    }
-  };
+  // const addToRefs = (el) => {
+  //   if (el && !revealRefs.current.includes(el)) {
+  //     revealRefs.current.push(el);
+  //   }
+  // };
   return (
     <ServiceSection id="services">
       {/* //<Background ref={ref}> */}
