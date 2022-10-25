@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "../../../node_modules/slick-carousel/slick/slick.css";
 import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 
+
 const Card = lazy(() => import("../../components/Card/index"));
 
 const Section = styled.div`
@@ -14,6 +15,7 @@ const Section = styled.div`
   align-items: center;
   width: 100%;
   padding: 5rem 0;
+  background:var(--white);
 `;
 
 const Title = styled.h1`
@@ -84,20 +86,21 @@ const Testimonials = () => {
       <Carousal>
         <Slider {...settings}>
           <Card
-            text="Image 1"
-            name="Message 1"
+            
+            text="Samiksha Kapoor"
+            name="Great Products "
             image="avatar-1"
           />
 
           <Card
-            text="Image 2"
-            name="Message 2"
+            text="Disha  Vedh"
+            name="Brillo Oil help me reduce my scarlp"
             image="avatar-2"
           />
 
           <Card
-            text="Image 3."
-            name="Message 3"
+            text="Atul Upadhyay"
+            name="Good Customer Support"
             image="avatar-3"
           />
 

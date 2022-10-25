@@ -1,0 +1,35 @@
+
+@import url('http://fonts.cdnfonts.com/css/poppins');
+
+.aboutWording {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff; 
+    color: #061613; 
+    border-radius: 25px;
+    border: 2px solid #02353C;
+    font-size: medium;
+    padding: 30px; 
+    width: fit-content;
+    height: fit-content;
+ 
+    /* width: 200px;
+    height: 150px;  */
+  }
+  .aboutWording:hover {
+    box-shadow: #02353C;
+    color: #000;
+    transform: translate(0, -5px);
+    
+  }
+
+  @media only screen and (max-width: 600px) {
+    .aboutWording {
+      align-items: center;
+      grid-gap: 1.5em;
+      grid-template-rows: auto;
+      grid-template-columns: 150px auto;
+      font-size: small;
+      min-width: auto;
+      height: auto;
+    }
+}

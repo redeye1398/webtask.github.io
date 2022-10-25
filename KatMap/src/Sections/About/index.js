@@ -1,14 +1,17 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import wave from "../../assets/waves.svg";
-import rocket from "../../assets/rocket image.png";
-// import human from "../../assets/human.png";
-// import hand from "../../assets/hand.svg";
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+import '../About/index.css'; 
+import rocket from "../../assets/rocket.jpg";
+import human from "../../assets/human.jpg";
+import hand from "../../assets/hand.jpg";
 
-const move = keyframes`
-0% { transform: translateY(-5px)         }
-    50% { transform: translateY(10px) translateX(10px)        }
-    100% { transform: translateY(-5px)         }
-`;
+// const move = keyframes`
+// 0% { transform: translateY(-5px)         }
+//     50% { transform: translateY(10px) translateX(10px)        }
+//     100% { transform: translateY(-5px)         }
+// `;
 
 const AboutSection = styled.section`
   width: 100vw;
@@ -66,27 +69,28 @@ const CurvedLine = styled.div`
   border-radius: 150%/60px 70px 0 0;
 `;
 
-const Content = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  @media only Screen and (max-width: 40em) {
-    flex-direction: column;
-  }
-`;
 
-const Rocket = styled.div`
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  width: 40%;
-  padding-bottom: 5rem;
-  animation: ${move} 2.5s ease infinite;
-  @media only Screen and (max-width: 40em) {
-    width: 50vw;
-    padding-bottom: 0;
-  }
-`;
+// const Content = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   @media only Screen and (max-width: 40em) {
+//     flex-direction: column;
+//   }
+// `;
+
+// const Rocket = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   align-content: center;
+//   width: 40%;
+//   padding-bottom: 5rem;
+//   animation: ${move} 2.5s ease infinite;
+//   @media only Screen and (max-width: 40em) {
+//     width: 50vw;
+//     padding-bottom: 0;
+//   }
+// `;
 
 // const Human = styled.div`
 //   width: 50%;
@@ -98,27 +102,27 @@ const Rocket = styled.div`
 //     display: none;
 //   }
 // `;
-const Text = styled.h4`
-  font-size: calc(0.5rem + 1vw);
-  line-height: 1.5;
-  color: rgba(0,0,0,0.65);
-`;
-const Circle = styled.span`
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  background-color: black;
-  margin-right: 0.5rem;
-  margin-top: 1rem;
-`;
-const AboutText = styled.div`
-  width: 50%;
-  position: relative;
-  @media only Screen and (max-width: 40em) {
-    width: 100%;
-  }
-`;
+// const Text = styled.h4`
+//   font-size: calc(0.5rem + 1vw);
+//   line-height: 1.5;
+//   color: rgba(0,0,0,0.65);
+// `;
+// const Circle = styled.span`
+//   display: inline-block;
+//   width: 1rem;
+//   height: 1rem;
+//   border-radius: 50%;
+//   background-color: black;
+//   margin-right: 0.5rem;
+//   margin-top: 1rem;
+// `;
+// const AboutText = styled.div`
+//   width: 50%;
+//   position: relative;
+//   @media only Screen and (max-width: 40em) {
+//     width: 100%;
+//   }
+// `;
 
 const About = () => {
   return (
@@ -132,14 +136,14 @@ const About = () => {
           <Title>About Us</Title>
           <CurvedLine />
         </div>
-        <Content>
+        {/* <Content>
           <Rocket>
             <img src={rocket} alt="" width="400" height="600" />
           </Rocket>
           <AboutText>
             {/* <Human>
               <img src={human} alt="" width="400" height="400" />
-            </Human> */}
+            </Human> 
 
             <Text>
             Serving with Herbs ” – 
@@ -155,9 +159,30 @@ const About = () => {
               <Circle style={{ backgroundColor: "var(--black)" }} />
             </div>
           </AboutText>
-        </Content>
+        </Content> */}
+         <Carousel  infiniteLoop="true"   autoPlay="300">
+                <div>
+                    <img src={rocket} alt=""/>
+                    <p className="aboutWording">Our Ayurvedic Expert Doctors have been serving in aesthetic industry Since 2015.We are inventing preparing chemical free , paraben free products for our customers
+                    </p>
+                </div>
+                <div>
+                    <img src={human} alt="" />
+                    <p className="aboutWording">Katmap’s most Important, Valuable and Research Based Product. 
+                    Sora Lotion is Furished with  and eand oil, maka ,neem, Aamlaki which helps to remove dandruff, reduces hair fall, promotes hair regrowth, and Maintains quality & textures .</p>
+                </div>
+                <div>
+                    <img src={hand} alt=""/>
+                    
+                    <p className="aboutWording">The Katmap’s  Brillo hair oil is anti hair fall oil and it has Rich formulation of herbs . which are exactly needed for our Hair Health.
+
+Brillo hair oil is free from mineral oil and chemicals. Mainly Brillo hair oil formedwith  erand oil , maka , amlaki , neem etc. So there  god gifted herbs are mainly  essential for hairs promotes hair regrowth , reduce hair fall , Prevent greying of hair the, Maintains Healthy Scalp</p>
+                </div>
+            </Carousel>
       </Main>
+      
     </AboutSection>
+    
   );
 };
 

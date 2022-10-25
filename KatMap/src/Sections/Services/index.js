@@ -1,9 +1,12 @@
 import gsap from "gsap";
-import {  useRef } from "react";
+import {  useRef   } from "react";
 import styled from "styled-components";
 
+
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import Tube from "../../assets/3dtube.png";
+
+
+import "../Services/index.css";
 // import Cone from "../../assets/3dtriangle.png";
 
 
@@ -22,7 +25,7 @@ const ServiceSection = styled.section`
   align-items: center;
   justify-content: center;
   position: relative;
-  padding-top: 20rem;
+  // padding-top: 20rem;
 `;
 
 // const Background = styled.div`
@@ -117,6 +120,7 @@ const OBJ = styled.div`
 
 const Services = () => {
   //const ref = useRef(null);
+
   gsap.registerPlugin(ScrollTrigger);
   const revealRefs = useRef([]);
   revealRefs.current = [];
@@ -317,7 +321,11 @@ const Services = () => {
   //   }
   // };
   return (
+    
     <ServiceSection id="services">
+     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#ffffff" fill-opacity="1" d="M0,256L120,240C240,224,480,192,720,165.3C960,139,1200,117,1320,106.7L1440,96L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
+</svg>
       {/* //<Background ref={ref}> */}
         <Title className="title">What We Do</Title>
         {/* <Line id="line" />
@@ -327,18 +335,18 @@ const Services = () => {
       {/* </Background> */}
       <Content>
         <TextBlock
-          topic="Support"
-          title={<h1>We provide below services</h1>}
+          topic="Product"
+          title={<h1>We provide below products</h1>}
           subText={
             <h5> 
-                 <ol>
-        <li>Hair Care </li>
-        <li>Psoriasis Care</li>
-       
-    </ol>
+        
+    
+             
               </h5>
           }
+          
         />
+        
         <OBJ>
           {/* <img src={Capsule} alt="Capsule Object" width="400" height="400" /> */}
         </OBJ>
@@ -376,8 +384,39 @@ const Services = () => {
         </OBJ>
         <SvgBlock svg="Develope.svg" />
       </Content> */}
+      
+<div class="body">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous"/>
+  <div class="card card-one">
+    <div class="profileImg first"></div>
+    <p>The Katmap’s  Brillo Hair oil is Anti Hair fall oil and it has Rich formulation of Herbs . which are exactly needed for our hair health.
+Mainly Brillo Hair oil formedwith  Erand oil , Maka , Aamlaki , Neem etc. So there god gifted herbs are mainly essential for to promote Hair regrowth , Reduce hair fall , Prevent Greying of hair the, Maintains healthy scalp</p>
+    {/* <ul>
+      <li><a href=""><i class="fab fa-instagram"></i></a></li>
+      <li><a href=""><i class="fab fa-github"></i></a></li>
+      <li><a href=""><i class="fab fa-stack-overflow"></i></a></li>
+    </ul> */}
+  </div>
+  <div class="card card-two">
+    <div class="profileImg second"></div>
+    <p>
+    Sora Lotion is a balanced blend of natural herbal extracts specifically chosen for their effectiveness in the treatment of Psoriasis. It is formulated to soothe chronically dry skin for the entire body which protects and enhances skin’s natural moisture. It is suitable for skin prone to eczema, psoriasis and dermatitis.
+
+    </p>
+    {/* <ul>
+      <li><a href=""><i class="fab fa-instagram"></i></a></li>
+      <li><a href=""><i class="fab fa-github"></i></a></li>
+      <li><a href=""><i class="fab fa-stack-overflow"></i></a></li>
+    </ul> */}
+  </div>
+ 
+
+</div>
+      
     </ServiceSection>
+    
   );
+  
 };
 
 export default Services;

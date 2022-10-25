@@ -6,6 +6,7 @@ import styled, { keyframes } from "styled-components";
 // import purpleBlob from "../../assets/blob purple.png";
 // import whiteBlob from "../../assets/blob white.png";
 
+import {  useState } from "react";
 import blob from "../../assets/blob.png";
 import arrow from "../../assets/Arrow Right.svg";
 // import Mobile from "../../assets/mobile.svg";
@@ -61,6 +62,8 @@ const HomeSection = styled.section`
 //   top: calc(2rem + 2vw);
 //   z-index: 5;
 // `;
+
+
 
 const MainContent = styled.div`
   display: flex;
@@ -183,6 +186,21 @@ const CTA = styled.button`
 `;
 
 const HeroSection = () => {
+  const [click, setClick] = useState(false);
+  const handleClick = (id, e) => {
+    setClick(!click);
+    scrollUp(id, e);
+  };
+
+  const scrollUp = (id, e) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+      inline: "nearest",
+    });
+  };
   return (
     <HomeSection id="home">
       {/* <Blobs>
@@ -210,10 +228,16 @@ const HeroSection = () => {
           and psoriasis care products have been developed with years
           of research to ensure that  will make you look & feel better.
           </SubText>
-          <CTA>
-            Get in touch &nbsp;
+          
+            <a href="#contact" onClick={(e) => handleClick("contact", e)}>
+            <CTA>
+          Get in touch &nbsp;
+            
             <img src={arrow} alt="cta" width="100" height="100" />
+           
           </CTA>
+        </a>
+        
         </Lb>
 
         <MobileSvg

@@ -1,4 +1,4 @@
-import SvgIcon from "../../assets/arrow-up.svg";
+import SvgIcon from "../../assets/arrow-up.png";
 
 import styled from "styled-components";
 import { useEffect, useRef } from "react";
